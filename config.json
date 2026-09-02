@@ -1,0 +1,38 @@
+{
+  "Style": "Fill",
+  "Schedule": {
+    "Sunday": [
+      { "Start": "00:00", "File": "domingo-madrugada.jpg" },
+      { "Start": "08:00", "File": "domingo-manha.jpg" },
+      { "Start": "16:30", "File": "domingo-noite.jpg" }
+    ],
+    "Monday": [
+      { "Start": "00:00", "File": "segunda-antes-10h.jpg" },
+      { "Start": "10:00", "File": "segunda-dia.jpg" }
+    ],
+    "Tuesday": [
+      { "Start": "00:00", "File": "terca-madrugada.jpg" },
+      { "Start": "07:00", "File": "terca-dia.jpg" },
+      { "Start": "18:00", "File": "terca-noite.jpg" }
+    ],
+    "Wednesday": [
+      { "Start": "00:00", "File": "quarta-antes-19h.jpg" },
+      { "Start": "19:00", "File": "quarta-noite.png" }
+    ],
+    "Thursday": [
+      { "Start": "00:00", "File": "quinta-madrugada.jpg" },
+      { "Start": "07:00", "File": "quinta-dia.jpg" },
+      { "Start": "18:00", "File": "quinta-noite.jpg" }
+    ],
+    "Friday": [
+      { "Start": "00:00", "File": "sexta-madrugada.jpg" },
+      { "Start": "07:00", "File": "sexta-dia.jpg" },
+      { "Start": "18:00", "File": "sexta-noite.jpg" }
+    ],
+    "Saturday": [
+      { "Start": "00:00", "File": "sabado-madrugada.jpg" },
+      { "Start": "08:00", "File": "sabado-manha.jpg" },
+      { "Start": "16:30", "File": "sabado-noite.jpg" }
+    ]
+  }
+}
