@@ -20,7 +20,7 @@ Não use SYSTEM e não marque “Executar independentemente de o usuário estar
 conectado”: uma tarefa na sessão 0 pode até alterar outro registro, mas não é uma
 forma confiável de atualizar a área de trabalho visível.
 
-## Horários extraídos do SVG
+## Horários
 
 | Dias | Períodos considerados | Gatilhos de transição |
 |---|---|---|
@@ -28,19 +28,6 @@ forma confiável de atualizar a área de trabalho visível.
 | Segunda | antes de 10:00; dia a partir de 10:00 | 00:00, 10:00 |
 | Terça, quinta e sexta | 00:00–06:59 madrugada; 07:00–17:59 dia; 18:00–23:59 noite | 00:00, 07:00, 18:00 |
 | Quarta | antes de 19:00; noite a partir de 19:00 | 00:00, 19:00 |
-
-O SVG é internamente inconsistente: sua caixa de tarefas ainda lista domingo
-07:00/17:00, quarta 18:00 e sexta 04:10, enquanto os blocos de decisão mostram os
-limites acima. Esta implementação considera os blocos de períodos como a versão
-vigente. Se 04:10 for realmente o início de um wallpaper diferente na sexta,
-adicione uma entrada às 04:10 em `config.json` e um gatilho equivalente no
-instalador.
-
-O desenho também não identifica qual imagem vale na segunda antes de 10:00 nem
-na quarta antes de 19:00. O exemplo usa nomes explícitos
-`segunda-antes-10h.jpg` e `quarta-antes-19h.jpg`, evitando preencher a lacuna de
-forma silenciosa. Substitua os arquivos ou os nomes no JSON pela regra de negócio
-correta.
 
 ## Estrutura
 
@@ -194,13 +181,3 @@ tarefa ainda está em execução.
 | Horário/fuso incorreto | sincronizar Windows Time e validar o fuso do equipamento |
 | Alteração de horário de verão | gatilhos usam hora local; testar transições de DST quando aplicável |
 | Antivírus/AppLocker bloqueia script | assinar o script e liberar publisher/caminho; preferir `AllSigned` em produção |
-
-## Recomendação final
-
-Em ambiente real eu usaria uma tarefa por usuário, contendo logon e todos os
-gatilhos exatos, com o watchdog de 30 minutos habilitado quando o custo de uma
-imagem incorreta for maior que o custo de execuções leves. Manteria configuração,
-script assinado e imagens versionadas localmente em `ProgramData`, distribuiria
-por GPO/Intune e monitoraria código de saída e log. O BAT ficaria apenas como
-atalho de suporte/compatibilidade; a tarefa chamaria PowerShell diretamente para
-preservar diagnóstico e reduzir uma camada desnecessária.
