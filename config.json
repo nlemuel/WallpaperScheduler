@@ -1,5 +1,15 @@
 {
   "Style": "Fill",
+  "Exceptions": [
+    {
+      "Type": "NthWeekdayOfMonth",
+      "Weekday": "Saturday",
+      "Occurrence": 1,
+      "Start": "18:00",
+      "End": "24:00",
+      "File": "primeiro-sabado.png"
+    }
+  ],
   "Schedule": {
     "Sunday": [
       { "Start": "00:00", "File": "domingo-madrugada.jpg" },
@@ -17,7 +27,7 @@
     ],
     "Wednesday": [
       { "Start": "00:00", "File": "quarta-antes-19h.jpg" },
-      { "Start": "19:00", "File": "quarta-noite.png" }
+      { "Start": "19:00", "File": "quarta-noite.jpg" }
     ],
     "Thursday": [
       { "Start": "00:00", "File": "quinta-madrugada.jpg" },

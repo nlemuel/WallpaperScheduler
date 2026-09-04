@@ -37,6 +37,7 @@ $triggers = @(
     New-ScheduledTaskTrigger -Weekly -WeeksInterval 1 -DaysOfWeek Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday -At '00:00'
     New-ScheduledTaskTrigger -Weekly -WeeksInterval 1 -DaysOfWeek Sunday,Saturday -At '08:00'
     New-ScheduledTaskTrigger -Weekly -WeeksInterval 1 -DaysOfWeek Sunday,Saturday -At '16:30'
+    New-ScheduledTaskTrigger -Weekly -WeeksInterval 1 -DaysOfWeek Saturday -At '18:00'
     New-ScheduledTaskTrigger -Weekly -WeeksInterval 1 -DaysOfWeek Monday -At '10:00'
     New-ScheduledTaskTrigger -Weekly -WeeksInterval 1 -DaysOfWeek Tuesday,Thursday,Friday -At '07:00'
     New-ScheduledTaskTrigger -Weekly -WeeksInterval 1 -DaysOfWeek Tuesday,Thursday,Friday -At '18:00'
